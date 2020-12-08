@@ -1,0 +1,93 @@
+body {
+  position: relative;
+  #weather {
+    @media screen and (max-width: 576px) {
+      &.blur {
+        filter: blur(4px);
+      }
+    }
+  }
+  #today-feature {
+    @media screen and (max-width: 576px) {
+      height: unset;
+      padding-top: $pd-3;
+      .weather__search__location {
+        form {
+          input {
+            padding-left: 0;
+          }
+        }
+      }
+      .weather__state {
+        @media screen and (max-width: 380px) {
+          padding: $pd-3 0 $pd-1;
+        }
+        padding: $pd-2 $pd-1 $pd-1;
+        .weather__state__icon {
+          height: 180px;
+        }
+        .weather__feature {
+          .weather__feature-temperature {
+            text-align: center;
+            font-size: 80px;
+            padding: $pd-2 0;
+            sup {
+              font-size: 46px;
+            }
+          }
+          .today__times {
+            text-align: center;
+            padding: 0 0 $pd-2;
+          }
+          .weather__feature-state {
+            height: unset;
+            padding-bottom: $pd-1;
+          }
+        }
+      }
+      .location__image {
+        padding: $pd-3 $pd-1 0;
+        @media screen and (max-width: 380px) {
+          padding: $pd-3 0 0;
+          .location__image__background {
+            p {
+              font-size: $fs-html-px - 3;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #weather__detail {
+    @media screen and (max-width: 576px) {
+      height: unset;
+      padding: $pd-7 $pd-5 $pd-11;
+      .weather__navbar {
+        .detail__timely {
+          li {
+            a {
+              font-size: $fs-html-px;
+            }
+          }
+        }
+        .detail__mode {
+          .detail__mode__item {
+            height: 35px;
+            width: 35px;
+            a {
+              line-height: 35px;
+              font-size: $fs-html-px;
+            }
+          }
+        }
+      }
+
+      .weather__week {
+        .weather__week__slide {
+          margin-top: $mg-7;
+        }
+      }
+    }
+  }
+}

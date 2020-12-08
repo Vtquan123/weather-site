@@ -1,0 +1,67 @@
+body {
+  position: relative;
+  #weather {
+    @media screen and (max-width: 767px) {
+      &.blur {
+        filter: blur(4px);
+      }
+    }
+  }
+  #today-feature {
+    @media screen and (max-width: 767px) {
+      height: unset;
+      padding-top: $pd-5;
+      .weather__search__location {
+        form {
+          input {
+            padding-left: 0;
+          }
+        }
+      }
+      .weather__state {
+        padding: $pd-2 $pd-1 $pd-1;
+        .weather__state__icon {
+        }
+        .weather__feature {
+          .weather__feature-temperature {
+            text-align: center;
+            font-size: 85px;
+            padding: $pd-2 0;
+            sup {
+              font-size: 50px;
+            }
+          }
+          .today__times {
+            text-align: center;
+            padding: 0 0 $pd-2;
+          }
+          .weather__feature-state {
+            height: unset;
+            padding-bottom: $pd-3;
+          }
+        }
+      }
+      .location__image {
+        padding: $pd-3 $pd-1 0;
+      }
+    }
+  }
+  #weather__detail {
+    @media screen and (max-width: 767px) {
+      height: unset;
+      padding: $pd-7 $pd-7 $pd-12;
+
+      .weather__today {
+        .today__slide--open {
+          margin-top: $mg-7;
+        }
+      }
+
+      .weather__week {
+        .weather__week__slide {
+          margin-top: $mg-7;
+        }
+      }
+    }
+  }
+}

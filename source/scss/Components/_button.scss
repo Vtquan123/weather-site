@@ -1,0 +1,89 @@
+.btn-search {
+  padding: 0;
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  background-color: $color-grey-0;
+  border-radius: 50%;
+  text-align: center;
+  i {
+    font-size: $fs-3;
+    line-height: 34px;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:active {
+    background-color: $color-grey-2;
+  }
+}
+
+.btn-submit {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0;
+  i {
+    color: $color-grey-2;
+    line-height: 35px;
+    font-size: $fs-3;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:active {
+    background-color: $color-grey-1;
+  }
+}
+
+.btn__toggle__darkmode {
+  margin-left: $mg-7;
+  label {
+    margin-bottom: 0;
+    .toggler__button {
+      height: 30px;
+      width: 60px;
+      background-color: $color-white;
+      border-radius: 40px;
+      box-shadow: inset 1px 1px 4px 0 $color-grey-5;
+      position: relative;
+      .button__circle {
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background-color: $color-grey-1;
+        box-shadow: 1px 1px 3px 0px $color-grey-5;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+      }
+    }
+    input:checked + .toggler__button {
+      .button__circle {
+        left: 33px;
+      }
+    }
+  }
+}
+
+.btn-toggle {
+  padding: 0;
+  border: none;
+  line-height: 1;
+  i {
+    font-size: $fs-5 + 5;
+    opacity: 0.7;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:active {
+    i {
+      color: $color-white;
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.quality__detail {
+  padding: $pd-1 0 $pd-2;
+  .quality__number {
+    @include text($fs-6 - 5, $fw-mid, $color-black);
+    line-height: 1;
+    sup {
+      font-size: $fs-5 + 5;
+    }
+    margin-bottom: 0;
+  }
+  .percentage__bar {
+    height: 70px;
+    width: 28px;
+    border: $border-0 $color-grey-13;
+    border-radius: 30px;
+    position: relative;
+    .circle {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transition: transform 0.3s linear;
+      transform: translateX(-50%) translateY(0);
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      background-color: $color-blue-1;
+    }
+  }
+}
+.quality__evaluation {
+  @include text($fs-3, $fw-mid-bold, $color-black);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  img {
+    width: 20px;
+    margin-left: $mg-0;
+  }
+}

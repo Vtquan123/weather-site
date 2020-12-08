@@ -1,0 +1,24 @@
+.weather__card {
+  width: unset !important;
+  text-align: center;
+  padding: $pd-2 $pd-4;
+  background-color: $color-white;
+  border-radius: 15px;
+  h4 {
+    @include text($fs-html-px - 1, $fw-bold, $color-black);
+    margin-bottom: 0;
+  }
+  img {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: $pd-1 0;
+  }
+  p {
+    @include text($fs-html-px - 1, $fw-bold, $color-black);
+    margin-bottom: 0;
+    span:not(.degree) {
+      color: $color-grey-2;
+    }
+  }
+}

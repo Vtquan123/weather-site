@@ -1,0 +1,75 @@
+#today-feature {
+  @media screen and (min-width: 1200px) and (max-width: 1450px) {
+    @media screen and (min-width: 1300px) and (max-width: 1400px) {
+      padding: $pd-6;
+      .weather__state {
+        .weather__feature {
+          .weather__feature-state {
+            padding-bottom: $pd-1;
+            height: unset;
+          }
+        }
+      }
+    }
+    .weather__search__location {
+      form {
+        input {
+          padding-left: $pd-0;
+          padding-right: 0;
+          font-size: $fs-4;
+        }
+      }
+    }
+    .location__image {
+      padding: 0;
+      .location__image__background {
+        p {
+          font-size: $fs-4;
+        }
+      }
+    }
+  }
+}
+
+#weather__detail {
+  @media screen and (min-width: 1451px) {
+    .weather__week {
+      .week__detail--open {
+        display: flex !important;
+      }
+    }
+  }
+  @media screen and (max-width: 1450px) {
+    .weather__week {
+      .week__slide--hide {
+        display: none !important;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1450px) {
+    @media screen and (min-width: 1300px) and (max-width: 1400px) {
+      padding: $pd-6;
+      .weather__week {
+        .weather__today__highlights {
+          padding-top: $pd-5;
+          .today__item {
+            .today__item__content {
+              margin-top: $mg-4;
+            }
+          }
+        }
+      }
+    }
+    .weather__week__detail {
+      display: none !important;
+    }
+    .weather__week__slide {
+      display: flex !important;
+    }
+    .weather__week {
+      .weather__week__slide {
+        margin-top: $mg-4;
+      }
+    }
+  }
+}

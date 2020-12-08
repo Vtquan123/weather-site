@@ -1,0 +1,104 @@
+#weather {
+  max-width: 1600px;
+  margin: auto;
+}
+#today-feature {
+  height: 100vh;
+  background-color: $color-white;
+  padding: $pd-7;
+  .weather__search__location {
+    form {
+      font-weight: $fw-mid-bold;
+      input {
+        border: none;
+        box-shadow: none;
+        width: 60%;
+        font-weight: $fw-mid-bold;
+        color: $color-black;
+        &::placeholder {
+          font-weight: $fw-mid-bold;
+        }
+      }
+    }
+  }
+  .weather__state {
+    padding: $pd-5 $pd-3 $pd-3;
+    .weather__state__icon {
+      height: 200px;
+      width: 100%;
+      text-align: center;
+      img {
+        height: 100%;
+      }
+    }
+    .weather__feature {
+      .weather__feature-temperature {
+        font-size: $fs-7;
+        margin: 0;
+        line-height: 1;
+        padding: $pd-5 0 $pd-5;
+        sup {
+          font-size: $fs-6;
+        }
+      }
+      .today__times {
+        padding-bottom: $pd-5;
+        margin: 0;
+        font-size: $fs-1;
+        font-weight: $fw-mid-bold;
+        border-bottom: $border-1 $color-grey-0;
+        span {
+          color: $color-grey-2;
+        }
+      }
+      .weather__feature-state {
+        padding: $pd-3 0 $pd-5;
+        height: 115px;
+        width: 100%;
+        .feature__state {
+          color: $color-black;
+          font-weight: $fw-mid-bold;
+          font-size: $fs-4;
+          margin-bottom: $mg-1;
+          &:last-child {
+            margin: 0;
+          }
+          img {
+            display: inline-block;
+            width: 30px;
+            height: auto;
+            margin-right: $pd-1;
+          }
+        }
+      }
+    }
+  }
+  .location__image {
+    padding: 0 $pd-3;
+    .location__image__background {
+      position: relative;
+      p {
+        text-align: center;
+        margin: 0;
+        padding: $pd-7;
+        border-radius: 20px;
+        background: url("../assets/img/rain.jpg") no-repeat center;
+        background-size: cover;
+        z-index: 10;
+        color: $color-white;
+        font-weight: $fw-mid;
+      }
+      &::before {
+        content: "";
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background-color: $color-grey-4-overlay;
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.today__uv {
+  position: relative;
+  .uv__index {
+    // margin: $mg-3 auto 0;
+
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 265.75px;
+    height: 100px;
+    .uv__gauge {
+      height: 100px;
+      width: 200px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 100px 100px 0 0;
+      &::before,
+      &::after,
+      .uv__meter,
+      .uv__circle__line,
+      .uv__amount {
+        content: "";
+        position: absolute;
+        display: block;
+      }
+
+      .uv__circle__line {
+        height: 90px;
+        width: 180px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-white;
+        border-radius: 90px 90px 0 0;
+        border: 10px solid $color-grey-3;
+        border-bottom: none;
+      }
+
+      &::before {
+        height: 100px;
+        width: 200px;
+        background-color: $color-white;
+        border-radius: 100px 100px 0 0;
+      }
+
+      &::after {
+        height: 70px;
+        width: 140px;
+        background-color: white;
+        border-radius: 70px 70px 0 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .uv__meter {
+        height: 100px;
+        width: 200px;
+        top: 100%;
+        border-radius: 0 0 100px 100px;
+        background-color: $color-orange-0;
+        transform-origin: center top;
+        transition: all 0.5s;
+        transform: rotate(0);
+      }
+
+      .uv__amount {
+        @include text($fs-8 + 5, $fw-mid-bold, $color-black);
+        z-index: 10;
+        line-height: 1;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .uv__gauge__number {
+      position: absolute;
+      @include text($fs-html, $fw-bold, $color-grey-2);
+      line-height: 1;
+    }
+    .uv__gauge__3 {
+      top: 22px;
+      left: 40px;
+    }
+    .uv__gauge__6 {
+      top: -18px;
+      left: 95px;
+    }
+    .uv__gauge__9 {
+      top: -18px;
+      right: 95px;
+    }
+    .uv__gauge__12 {
+      top: 22px;
+      right: 40px;
+    }
+  }
+}
+
+@keyframes display {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(36deg);
+  }
+}

@@ -1,0 +1,313 @@
+.darkmode {
+  background-color: $color-dark-0;
+  #weather {
+    #today-feature {
+      background-color: $color-dark-1;
+      .weather__search__location {
+        .search-icon {
+          color: $color-dark-text;
+        }
+        input {
+          background-color: $color-dark-1;
+          color: $color-dark-text;
+          &::placeholder {
+            color: $color-dark-text;
+          }
+          &:-internal-autofill-selected {
+            background-color: transparent !important;
+          }
+        }
+        .btn-search {
+          background-color: $color-dark-contrast;
+          i {
+            color: $color-dark-1;
+          }
+        }
+      }
+      .weather__state {
+        .weather__feature {
+          .weather__feature-temperature {
+            color: $color-dark-text;
+          }
+          .today__times {
+            color: $color-dark-text;
+            border-bottom: $border-1 $color-dark-text;
+            span {
+              color: $color-dark-3;
+            }
+          }
+          .weather__feature-state {
+            p {
+              color: $color-dark-text;
+            }
+          }
+        }
+      }
+
+      .location__image {
+        .location__image__background::before {
+          background-color: $color-grey-12;
+        }
+      }
+    }
+    #weather__detail {
+      background-color: $color-dark-0;
+      .weather__navbar {
+        .detail__timely {
+          li a {
+            color: $color-dark-2;
+            &.active {
+              color: $color-dark-text;
+              border-bottom: $border-1 $color-dark-text;
+            }
+          }
+        }
+        .detail__mode {
+          .detail__mode__item {
+            background-color: $color-dark-2;
+            a {
+              color: $color-dark-text;
+            }
+            &.active {
+              background-color: $color-dark-contrast;
+              a {
+                color: $color-dark-2;
+              }
+            }
+          }
+        }
+        .detail__darkmode__toggle {
+          label {
+            .toggler__button {
+              background-color: $color-dark-contrast;
+              box-shadow: inset 1px 1px 4px 0 $color-black;
+              .button__circle {
+                background-color: $color-dark-1;
+                box-shadow: 1px 1px 4px 0px $color-grey-11;
+              }
+            }
+          }
+        }
+      }
+
+      .weather__today {
+        .weather__today__slide {
+          .weather__card {
+            background-color: $color-dark-1;
+            h4 {
+              color: $color-dark-text;
+            }
+            .temperature__type {
+              color: $color-dark-text;
+              .degree {
+                color: $color-dark-text;
+              }
+            }
+          }
+          .swiper-button-prev,
+          .swiper-button-next {
+            &::after {
+              color: $color-dark-text;
+            }
+          }
+        }
+      }
+
+      .weather__week {
+        .weather__week__detail {
+          .weather__card {
+            background-color: $color-dark-1;
+            h4 {
+              color: $color-dark-text;
+            }
+            .temperature__type {
+              color: $color-dark-text;
+              .degree {
+                color: $color-dark-text;
+              }
+              .temperature__type {
+                color: $color-dark-3;
+                span {
+                  color: $color-dark-3;
+                }
+              }
+            }
+          }
+        }
+        #weekSlide {
+          .weather__card {
+            background-color: $color-dark-1;
+            h4 {
+              color: $color-dark-text;
+            }
+            .temperature__type {
+              color: $color-dark-text;
+              .degree {
+                color: $color-dark-text;
+              }
+              .temperature__type {
+                color: $color-dark-3;
+                span {
+                  color: $color-dark-3;
+                }
+              }
+            }
+          }
+          .swiper-button-prev,
+          .swiper-button-next {
+            &::after {
+              color: $color-dark-text;
+            }
+          }
+        }
+        .weather__today__highlights {
+          h3 {
+            color: $color-dark-text;
+          }
+          .today__item {
+            .today__item__content {
+              background-color: $color-dark-1;
+              h3 {
+                color: $color-dark-3;
+              }
+            }
+          }
+          .today__uv {
+            .uv__index {
+              .uv__gauge__number {
+                color: $color-dark-text;
+              }
+              .uv__gauge {
+                &::after,
+                &::before {
+                  background-color: $color-dark-1;
+                }
+                .uv__amount {
+                  background-color: $color-dark-1;
+                  color: $color-dark-text;
+                }
+                .uv__circle__line {
+                  background-color: $color-dark-1;
+                  border-color: $color-dark-text;
+                }
+                .uv__meter {
+                  background-color: $color-dark-contrast;
+                }
+              }
+            }
+          }
+          .today__wind {
+            .wind__velocity {
+              color: $color-dark-text;
+              span {
+                color: $color-dark-text;
+              }
+            }
+            .wind__direction {
+              color: $color-dark-text;
+              i {
+                border-color: $color-dark-3;
+              }
+            }
+          }
+          .today__sunrise {
+            .sunrise__sunset {
+              .sunrise__sunset__icon {
+                i {
+                  background-color: $color-dark-contrast;
+                  color: $color-dark-1;
+                }
+              }
+              .sunrise__sunset__detail {
+                p {
+                  color: $color-dark-text;
+                }
+                .duration {
+                  color: $color-dark-3;
+                }
+              }
+            }
+          }
+          .quality__detail {
+            .quality__number {
+              color: $color-dark-text;
+            }
+            .percentage__bar {
+              border-color: $color-dark-3;
+            }
+          }
+          .quality__evaluation {
+            color: $color-dark-text;
+          }
+        }
+      }
+    }
+  }
+  #navbar__xs {
+    background-color: $color-dark-overlay;
+    &.open {
+      .navbar__bar {
+        .btn-search {
+          background-color: $color-dark-navbar;
+        }
+      }
+    }
+    .navbar__bar {
+      background-color: $color-dark-navbar;
+      .btn-search {
+        background-color: $color-dark-1;
+        i {
+          color: $color-dark-text;
+        }
+        &:active {
+          background-color: $color-dark-contrast;
+          i {
+            color: $color-dark-navbar;
+          }
+        }
+      }
+      .btn-toggle {
+        i {
+          color: $color-dark-text;
+        }
+      }
+    }
+    .detail__mode {
+      .navbar__temp {
+        border-color: $color-dark-text;
+        .detail__mode__item {
+          background-color: $color-dark-navbar;
+          a {
+            color: $color-dark-text;
+          }
+          &.active {
+            background-color: $color-dark-contrast;
+            a {
+              color: $color-dark-navbar;
+            }
+          }
+        }
+      }
+      .detail__darkmode__toggle {
+        border-color: $color-dark-text;
+        .toggler__button {
+          background-color: $color-dark-contrast;
+          box-shadow: inset 1px 1px 4px 0 $color-black;
+          .button__circle {
+            background-color: $color-dark-navbar;
+            box-shadow: 1px 1px 4px 0px $color-grey-11;
+          }
+        }
+        .light-on {
+          text-shadow: unset;
+          color: $color-dark-text;
+          opacity: 0.4;
+        }
+        .light-off {
+          text-shadow: 0 0 5px $color-blue-1;
+          color: $color-blue-1;
+        }
+      }
+    }
+  }
+}

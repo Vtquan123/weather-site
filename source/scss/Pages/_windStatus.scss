@@ -1,0 +1,27 @@
+.today__wind {
+  .wind__velocity {
+    @include text($fs-6 - 5, $fw-mid, $color-black);
+    margin-bottom: 0;
+    padding: $pd-1 0;
+    span {
+      @include text($fs-3, $fw-mid-bold, $color-black);
+    }
+  }
+  .wind__direction {
+    @include text($fs-3, $fw-mid-bold, $color-black);
+    margin-bottom: 0;
+    i {
+      font-size: $fs-html;
+      color: $color-blue-1;
+      height: 35px;
+      width: 35px;
+      line-height: 31px;
+      text-align: center;
+      border: $border-1 #e6e6e6;
+      border-radius: 50%;
+      margin-right: $mg-1;
+      transition: all 0.3s linear;
+      transform: rotate(-180deg);
+    }
+  }
+}

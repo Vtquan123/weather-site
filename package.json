@@ -1,0 +1,34 @@
+{
+  "name": "weather-site",
+  "version": "1.0.0",
+  "description": "UI designed by Anton Mikhaltsov (Dribbble: https://bitly.com.vn/tq2jse)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Vtquan123/weather-site.git"
+  },
+  "keywords": [
+    "weather",
+    "app",
+    "weather",
+    "site"
+  ],
+  "author": "Vtquan123",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Vtquan123/weather-site/issues"
+  },
+  "homepage": "https://gitlab.com/Vtquan123/weather-site#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "popper.js": "^1.16.1",
+    "swiper": "^6.3.5"
+  }
+}

@@ -1,0 +1,17 @@
+.swiper-button-next,
+.swiper-button-prev {
+  &::after {
+    font-size: $fs-5;
+    font-weight: $fw-bold;
+    color: $color-black;
+  }
+  &:active {
+    opacity: 0.35;
+  }
+}
+.swiper-button-next {
+  right: 0px;
+}
+.swiper-button-prev {
+  left: 0px;
+}
