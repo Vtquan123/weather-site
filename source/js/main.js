@@ -119,13 +119,35 @@ getElementID("navbar__toggle__button").onclick = () => {
   }, 500);
 };
 
-/* Fixed navbar XS position */
+/* Window onresize */
 const windowHeight = window.innerHeight;
-// getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
 window.onresize = () => {
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  // getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
+  if (windowWidth >= 768 && windowWidth < 1200) {
+    if (windowHeight > windowWidth) {
+      getElementID("today-feature").style.height = "100vh";
+      getElementID("weather__detail").style.height = "100vh";
+    } else {
+      getElementID("today-feature").style.height = "unset";
+      getElementID("weather__detail").style.height = "unset";
+    }
+  } else if (windowWidth >= 1200) {
+    if (windowHeight >= 800) {
+      getElementID("today-feature").style.height = "100vh";
+      getElementID("weather__detail").style.height = "100vh";
+    } else {
+      getElementID("today-feature").style.height = "unset";
+      getElementID("weather__detail").style.height = "unset";
+    }
+  }
+};
+
+/* Window onload */
+window.onload = () => {
+  getElementID("gps").click();
+  const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
   if (windowWidth >= 768 && windowWidth < 1200) {
     if (windowHeight > windowWidth) {
       getElementID("today-feature").style.height = "100vh";
@@ -334,30 +356,6 @@ for (let i = 0; i < 25; i++) {
     `;
 }
 queryElement("#todaySlide .swiper-wrapper").innerHTML = todaySlideInner;
-
-window.onload = () => {
-  getElementID("gps").click();
-  const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
-  // getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
-  if (windowWidth >= 768 && windowWidth < 1200) {
-    if (windowHeight > windowWidth) {
-      getElementID("today-feature").style.height = "100vh";
-      getElementID("weather__detail").style.height = "100vh";
-    } else {
-      getElementID("today-feature").style.height = "unset";
-      getElementID("weather__detail").style.height = "unset";
-    }
-  } else if (windowWidth >= 1200) {
-    if (windowHeight >= 800) {
-      getElementID("today-feature").style.height = "100vh";
-      getElementID("weather__detail").style.height = "100vh";
-    } else {
-      getElementID("today-feature").style.height = "unset";
-      getElementID("weather__detail").style.height = "unset";
-    }
-  }
-};
 
 /* SWIPER */
 let swiperDay = new Swiper(".swiper-container-day", {
