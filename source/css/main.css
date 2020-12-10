@@ -447,8 +447,10 @@ body.no-scroll {
 #navbar__xs {
   position: fixed;
   display: block;
-  height: 1000px;
+  height: unset;
   width: 100%;
+  top: 100%;
+  transform: translateY(-100%);
   z-index: 1000;
   left: 0;
   background-color: rgba(189, 189, 189, 0.4);
@@ -460,14 +462,20 @@ body.no-scroll {
 
 #navbar__xs.open {
   top: 0 !important;
+  transform: translateY(0);
+  height: 1000px;
 }
 
 #navbar__xs.open .navbar__bar {
   background-color: unset !important;
 }
 
+#navbar__xs.open .detail__mode {
+  display: block;
+}
+
 #navbar__xs .navbar__bar {
-  padding: 10px 15px 20px;
+  padding: 10px 15px;
   margin: 0;
   background-color: #e5e5e5;
 }
@@ -485,17 +493,21 @@ body.no-scroll {
   left: 50%;
 }
 
-#navbar__xs .navbar__temp {
+#navbar__xs .detail__mode {
+  display: none;
+}
+
+#navbar__xs .detail__mode .navbar__temp {
   padding: 15px 0;
   margin: 0 25px;
   border-bottom: 1px solid #fff;
 }
 
-#navbar__xs .navbar__temp #celsius {
+#navbar__xs .detail__mode .navbar__temp #celsius {
   margin: 0;
 }
 
-#navbar__xs .navbar__temp .detail__mode__item {
+#navbar__xs .detail__mode .navbar__temp .detail__mode__item {
   height: 40px;
   width: 40px;
   background-color: #fff;
@@ -505,15 +517,15 @@ body.no-scroll {
   cursor: pointer;
 }
 
-#navbar__xs .navbar__temp .detail__mode__item.active {
+#navbar__xs .detail__mode .navbar__temp .detail__mode__item.active {
   background-color: #000;
 }
 
-#navbar__xs .navbar__temp .detail__mode__item.active a {
+#navbar__xs .detail__mode .navbar__temp .detail__mode__item.active a {
   color: #f6f6f8;
 }
 
-#navbar__xs .navbar__temp .detail__mode__item a {
+#navbar__xs .detail__mode .navbar__temp .detail__mode__item a {
   font-size: 18px;
   font-weight: 700;
   color: #000;
@@ -521,21 +533,21 @@ body.no-scroll {
   line-height: 40px;
 }
 
-#navbar__xs .detail__darkmode__toggle {
+#navbar__xs .detail__mode .detail__darkmode__toggle {
   padding: 15px 0;
   margin: 0 25px;
   border-bottom: 1px solid #fff;
 }
 
-#navbar__xs .detail__darkmode__toggle .toggler__button {
+#navbar__xs .detail__mode .detail__darkmode__toggle .toggler__button {
   box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-#navbar__xs .detail__darkmode__toggle .toggler__button .button__circle {
+#navbar__xs .detail__mode .detail__darkmode__toggle .toggler__button .button__circle {
   background-color: #bdbdbd;
 }
 
-#navbar__xs .detail__darkmode__toggle i {
+#navbar__xs .detail__mode .detail__darkmode__toggle i {
   font-size: 22px;
   color: #fff;
   text-shadow: 1px -1px 3px rgba(0, 0, 0, 0.15);
@@ -543,14 +555,14 @@ body.no-scroll {
   transform: rotate(150deg);
 }
 
-#navbar__xs .detail__darkmode__toggle .light-on {
+#navbar__xs .detail__mode .detail__darkmode__toggle .light-on {
   margin-right: 10px;
   text-shadow: 0 0 5px #ffde4a;
   color: #ffbf5e;
   opacity: 1;
 }
 
-#navbar__xs .detail__darkmode__toggle .light-off {
+#navbar__xs .detail__mode .detail__darkmode__toggle .light-off {
   margin-left: 10px;
 }
 

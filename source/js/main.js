@@ -121,11 +121,11 @@ getElementID("navbar__toggle__button").onclick = () => {
 
 /* Fixed navbar XS position */
 const windowHeight = window.innerHeight;
-getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
+// getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
 window.onresize = () => {
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
+  // getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
   if (windowWidth >= 768 && windowWidth < 1200) {
     if (windowHeight > windowWidth) {
       getElementID("today-feature").style.height = "100vh";
@@ -339,7 +339,7 @@ window.onload = () => {
   getElementID("gps").click();
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
+  // getElementID("navbar__xs").style.top = `${windowHeight - 56}px`;
   if (windowWidth >= 768 && windowWidth < 1200) {
     if (windowHeight > windowWidth) {
       getElementID("today-feature").style.height = "100vh";
